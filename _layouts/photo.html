@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<style>
+    img.photo-list {
+        width: 256px;
+        height: 196px;
+        object-fit: cover;
+        padding: 3px;
+    }
+</style>
+
+<h1>{{ page.title }}</h1>
+
+<ol>
+    {% for item in page.photos %}
+    <p><a href="{{ item.original }}"><img class="photo-list" src='{{ item.thumb }}'></a></p>
+    {% endfor %}
+</ol>
+
+{{content}}
